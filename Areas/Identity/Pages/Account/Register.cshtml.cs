@@ -74,8 +74,11 @@ namespace coding_assignment_onesignal.Areas.Identity.Pages.Account
 
                     try
                     {
-
-                        await _userManager.AddToRoleAsync(user, Enums.Roles.DataEntryOperator.ToString());
+                        var adminList = await _userManager.GetUsersInRoleAsync("Admin");
+                        if (adminList.Count > 0)
+                            await _userManager.AddToRoleAsync(user, Enums.Roles.DataEntryOperator.ToString());
+                        else
+                            await _userManager.AddToRoleAsync(user, Enums.Roles.Admin.ToString());
 
                         var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                         var callbackUrl = Url.Page(

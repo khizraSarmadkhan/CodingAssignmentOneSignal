@@ -12955,11 +12955,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\coding_assignment_onesignal\\coding_assignment_onesignal.csproj",
+      "projectUniqueName": "E:\\abc\\CodingAssignmentOneSignal\\coding_assignment_onesignal.csproj",
       "projectName": "coding_assignment_onesignal",
-      "projectPath": "E:\\coding_assignment_onesignal\\coding_assignment_onesignal.csproj",
+      "projectPath": "E:\\abc\\CodingAssignmentOneSignal\\coding_assignment_onesignal.csproj",
       "packagesPath": "C:\\Users\\Taha Ahmad\\.nuget\\packages\\",
-      "outputPath": "E:\\coding_assignment_onesignal\\obj\\",
+      "outputPath": "E:\\abc\\CodingAssignmentOneSignal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
