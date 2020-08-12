@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>This is a CRUD implementation of Apps Api for <a href="https://documentation.onesignal.com/reference/create-notification">OneSignal</a>.</p>
+    <br />
+    <h3>
+        <a class="nav-link text-dark" asp-area="" asp-controller="OneSignalApps" asp-action="Index">Click here, to view my list of OneSignal Apps</a>
+    </h3>
+</div>

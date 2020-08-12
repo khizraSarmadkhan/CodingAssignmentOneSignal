@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>My List of OneSignal Apps</h1>
+<br />
+<form method="post" asp-action="CreateApp" asp-controller="OneSignalApps">
+    <div class="input-group">
+        <input name="newAppName" class="form-control w-25">
+        <span class="input-group-btn">
+            <button class="btn btn-info">Create New App</button>
+        </span>
+    </div>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>App Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var app in ViewBag.AppsList)
+        {        
+            <tr>
+                <td>@app.Id</td>
+                <td>@app.Name</td>
+                <td>
+                    <a class="btn btn-warning" asp-controller="OneSignalApps" asp-action="UpdateApp" asp-route-appId="@app.Id">Edit</a>
+                    <a class="btn btn-danger" asp-controller="OneSignalApps" asp-action="DeleteApp" asp-route-appId="@app.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

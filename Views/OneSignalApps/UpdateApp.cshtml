@@ -1,0 +1,22 @@
+﻿
+@model OneSignalAppsViewModel
+
+@{
+    ViewData["Title"] = "UpdateApp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Update App Id: @ViewBag.AppData.Id</h1>
+<br />
+<br />
+<form method="post" asp-action="EditApp" asp-controller="OneSignalApps">
+    <div class="input-group">
+        <input type="hidden" asp-for="@Model.Id" value="@ViewBag.AppData.Id"/>
+        <input asp-for="@Model.Name" class="form-control w-25" value="@ViewBag.AppData.Name">
+        <br />
+        <br />
+        <span class="input-group-btn">
+            <button class="btn btn-info">Update App</button>
+        </span>
+    </div>
+</form>
